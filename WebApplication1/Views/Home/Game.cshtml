@@ -1,0 +1,86 @@
+﻿@model WebApplication1.Models.GameData;
+
+<h2>Game Editor</h2>
+
+<div id="canvas" style="position:relative; width:500px; height:500px; border:1px solid black;">
+    <div hidden id="square" style="position:absolute; width:50px; height:50px; background:red;"></div>
+
+</div>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="UploadFile">
+    <input type="file" name="uploadedFile"/>    
+    <button type="submit">Upload</button>
+</form>
+<button id="saveBtn">Save File</button>
+
+
+@if(ViewBag.FileContent != null)
+{
+    <h3>Loaded File Content</h3>
+    <pre>@ViewBag.FileContent</pre>
+    <p>Line Count: @ViewBag.LineCount</p>
+    <p>X: @Model.X, Y: @Model.Y</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            showSquare(@Model.X, @Model.Y);
+        });
+    </script>
+}
+
+
+<script>
+    let x = @(Model?.X ?? 0);
+    let y = @(Model?.Y ?? 0);
+
+    const square = document.querySelector("#square");
+
+    function showSquare(x, y){
+        square.hidden = false;
+        square.style.left = x + "px";
+        square.style.top = y + "px";
+    }
+
+
+    document.addEventListener("keydown", e =>{
+        switch(e.key){
+            case "ArrowUp":
+            y -= 10;
+            break;
+            case "ArrowDown":
+            y += 10;
+            break;
+            case "ArrowLeft":
+            x -= 10;
+            break;
+            case "ArrowRight":
+            x += 10;
+            break;
+        }
+        updateSquare();
+    });
+
+    function updateSquare(){
+        square.style.left = x + "px";
+        square.style.top = y + "px";
+    }
+
+    document.querySelector("#saveBtn").addEventListener("click", async () => {
+        const resp = await fetch("/Home/SaveGame", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ X: x, Y: y })
+        });
+
+        if(resp.ok){
+            const blob = await resp.blob();
+            //console.log(blob);
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "game.xml";
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    });
+</script>
