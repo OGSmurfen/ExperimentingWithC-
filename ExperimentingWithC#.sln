@@ -5,7 +5,13 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoWindowDraw_TimerUsage", "NoWindowDraw_TimerImpl\NoWindowDraw_TimerUsage.csproj", "{787496CA-1ADF-DB46-AD98-154C15F29FF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{EBB00A3D-E75A-43DA-BB1E-95C126A1DFEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameWithXmlSave", "WebApplication1\GameWithXmlSave.csproj", "{EBB00A3D-E75A-43DA-BB1E-95C126A1DFEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingShifts", "WorkingShifts\WorkingShifts.csproj", "{E786956D-8C84-49D8-B58C-771FBB0F3C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkShiftsConsole", "WorkShiftsConsole\WorkShiftsConsole.csproj", "{BF2A2F4C-957F-4799-99AE-1120F938F9DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkShiftsLibrary", "WorkShiftsLibrary\WorkShiftsLibrary.csproj", "{F9AF66ED-C17B-4D5E-A39E-7ECB1C1D9D33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,20 @@ Global
 		{EBB00A3D-E75A-43DA-BB1E-95C126A1DFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBB00A3D-E75A-43DA-BB1E-95C126A1DFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBB00A3D-E75A-43DA-BB1E-95C126A1DFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E786956D-8C84-49D8-B58C-771FBB0F3C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E786956D-8C84-49D8-B58C-771FBB0F3C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E786956D-8C84-49D8-B58C-771FBB0F3C71}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E786956D-8C84-49D8-B58C-771FBB0F3C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E786956D-8C84-49D8-B58C-771FBB0F3C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E786956D-8C84-49D8-B58C-771FBB0F3C71}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BF2A2F4C-957F-4799-99AE-1120F938F9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2A2F4C-957F-4799-99AE-1120F938F9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2A2F4C-957F-4799-99AE-1120F938F9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2A2F4C-957F-4799-99AE-1120F938F9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9AF66ED-C17B-4D5E-A39E-7ECB1C1D9D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9AF66ED-C17B-4D5E-A39E-7ECB1C1D9D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9AF66ED-C17B-4D5E-A39E-7ECB1C1D9D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9AF66ED-C17B-4D5E-A39E-7ECB1C1D9D33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
